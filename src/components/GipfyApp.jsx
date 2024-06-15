@@ -2,16 +2,13 @@ import { useState } from "react";
 import { SearchForm } from "./SearchForm";
 export const GipfyApp = () => {
   const [categories, setCategories] = useState(["Audi", "Lada"]);
-  const onAddCategories = () => {
-    setCategories(["Renault", ...categories]);
-  };
   return (
     <div className="container-md">
       <div className="row">
         <div className="col-12 bg-secondary">
           <h1 className="display-2">Giphy App Search</h1>
         </div>
-        <SearchForm onAddCategories={setCategories} categories={categories} />
+        <SearchForm onAddCategories={setCategories} />
       </div>
       <div className="row mt-3">
         <div className="col">
