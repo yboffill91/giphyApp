@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 yarn.lock
+apuntes.md
 
 
 # Editor directories and files

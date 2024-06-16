@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { PropTypes } from "prop-types";
 
-export const SearchForm = ({ onAddCategories }) => {
+export const SearchForm = ({ onNewCategory }) => {
   const [value, setValue] = useState("");
 
   const onImputChange = (e) => {
@@ -11,7 +11,7 @@ export const SearchForm = ({ onAddCategories }) => {
   const onSubmitHandler = (e) => {
     e.preventDefault();
     if (!value || value === " " || value.length < 1) return;
-    onAddCategories((cat) => [value, ...cat]);
+    onNewCategory(value);
     setValue("");
   };
 
@@ -36,5 +36,5 @@ export const SearchForm = ({ onAddCategories }) => {
 };
 
 SearchForm.propTypes = {
-  onAddCategories: PropTypes.any,
+  onNewCategory: PropTypes.any,
 };
